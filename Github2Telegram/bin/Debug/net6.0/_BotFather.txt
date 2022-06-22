@@ -1,0 +1,12 @@
+list_all_repo - list all repositories
+list_added_repo - list all repositories
+add_repo - add to tracking and notifications
+remove_repo - remove from tracking and notifications
+list_auth_user - list auth users
+add_auth_user - add auth user who can run commits command
+remove_auth_user - remove auth user
+list_notify_user - list notify users
+add_notify_user - add notify user who receives commits notifications
+remove_notify_user - remove notify user
+view_commits - list the most recent commits
+view_commits_by_repo - list the most recent commits by repository
