@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Github2Telegram.Model
+﻿namespace Github2Telegram.Model
 {
     public class GithubRepo
     {

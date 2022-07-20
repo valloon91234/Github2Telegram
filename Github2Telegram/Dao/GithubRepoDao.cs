@@ -3,12 +3,14 @@ using MySql.Data.MySqlClient;
 
 namespace Github2Telegram.Dao
 {
-    public class GithubRepoDao
+    public class GithubRepoDao : IDisposable
     {
         private MySqlConnection Connection { get; set; }
 
-        public GithubRepoDao(MySqlConnection connection)
+        public GithubRepoDao()
         {
+            MySqlConnection connection = new(Database.ConnectionString);
+            connection.OpenAsync().GetAwaiter().GetResult();
             this.Connection = connection;
             using var cmd = new MySqlCommand(@"CREATE TABLE IF NOT EXISTS `tbl_github_repo`  (
   `account` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
@@ -76,5 +78,12 @@ namespace Github2Telegram.Dao
             cmd.Prepare();
             return cmd.ExecuteNonQuery();
         }
+
+        public void Dispose()
+        {
+            Connection?.Dispose();
+            GC.SuppressFinalize(this);
+        }
+
     }
 }

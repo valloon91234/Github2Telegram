@@ -1,4 +1,8 @@
-list_all_repo - list all repositories
+start - start the bot to receive notifications
+stop - stop the bot on group
+list_github_account - list registered github accounts
+add_github_account - add github account
+remove_github_account - remove github account
 list_added_repo - list all repositories
 add_repo - add to tracking and notifications
 remove_repo - remove from tracking and notifications
@@ -10,3 +14,6 @@ add_notify_user - add notify user who receives commits notifications
 remove_notify_user - remove notify user
 view_commits - list the most recent commits
 view_commits_by_repo - list the most recent commits by repository
+
+
+list_all_repo - list all repositories

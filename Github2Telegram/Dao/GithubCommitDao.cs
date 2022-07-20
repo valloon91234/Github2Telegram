@@ -3,12 +3,14 @@ using MySql.Data.MySqlClient;
 
 namespace Github2Telegram.Dao
 {
-    public class GithubCommitDao
+    public class GithubCommitDao : IDisposable
     {
         private MySqlConnection Connection { get; set; }
 
-        public GithubCommitDao(MySqlConnection connection)
+        public GithubCommitDao()
         {
+            MySqlConnection connection = new(Database.ConnectionString);
+            connection.OpenAsync().GetAwaiter().GetResult();
             this.Connection = connection;
             using var cmd = new MySqlCommand(@"CREATE TABLE IF NOT EXISTS `tbl_github_commit`  (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -16,6 +18,8 @@ namespace Github2Telegram.Dao
   `repo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `sha` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `committer` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `branch` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `message` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
   `url` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `committed_at` datetime NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -41,6 +45,8 @@ namespace Github2Telegram.Dao
                     Repo = (string)reader["repo"],
                     Sha = (string)reader["sha"],
                     Committer = (string)reader["committer"],
+                    Branch = (string)reader["branch"],
+                    Message = (string)reader["message"],
                     Url = (string)reader["url"],
                     CommittedAt = (DateTime)reader["committed_at"],
                     CreatedAt = (DateTime)reader["created_at"]
@@ -66,6 +72,8 @@ namespace Github2Telegram.Dao
                     Repo = (string)reader["repo"],
                     Sha = (string)reader["sha"],
                     Committer = (string)reader["committer"],
+                    Branch = (string)reader["branch"],
+                    Message = (string)reader["message"],
                     Url = (string)reader["url"],
                     CommittedAt = (DateTime)reader["committed_at"],
                     CreatedAt = (DateTime)reader["created_at"]
@@ -93,6 +101,8 @@ namespace Github2Telegram.Dao
                     Repo = (string)reader["repo"],
                     Sha = (string)reader["sha"],
                     Committer = (string)reader["committer"],
+                    Branch = (string)reader["branch"],
+                    Message = (string)reader["message"],
                     Url = (string)reader["url"],
                     CommittedAt = (DateTime)reader["committed_at"],
                     CreatedAt = (DateTime)reader["created_at"]
@@ -103,15 +113,24 @@ namespace Github2Telegram.Dao
 
         public int Insert(GithubCommit m)
         {
-            using var cmd = new MySqlCommand($"INSERT INTO tbl_github_commit(account, repo, sha, committer, url, committed_at) VALUES(@account, @repo, @sha, @committer, @url, @committed_at)", Connection);
+            using var cmd = new MySqlCommand($"INSERT INTO tbl_github_commit(account, repo, sha, committer, branch, message, url, committed_at) VALUES(@account, @repo, @sha, @committer, @branch, @message, @url, @committed_at)", Connection);
             cmd.Parameters.AddWithValue("@account", m.Account);
             cmd.Parameters.AddWithValue("@repo", m.Repo);
             cmd.Parameters.AddWithValue("@sha", m.Sha);
             cmd.Parameters.AddWithValue("@committer", m.Committer);
+            cmd.Parameters.AddWithValue("@branch", m.Branch);
+            cmd.Parameters.AddWithValue("@message", m.Message);
             cmd.Parameters.AddWithValue("@url", m.Url);
             cmd.Parameters.AddWithValue("@committed_at", m.CommittedAt);
             cmd.Prepare();
             return cmd.ExecuteNonQuery();
         }
+
+        public void Dispose()
+        {
+            Connection?.Dispose();
+            GC.SuppressFinalize(this);
+        }
+
     }
 }

@@ -9,7 +9,6 @@ AppHelper.FixCulture();
 
 // See https://github.com/tonerdo/dotnet-env
 DotNetEnv.Env.Load("config.env");
-Database.Init();
 TelegramClient.Init();
 GithubClient.Run();
 

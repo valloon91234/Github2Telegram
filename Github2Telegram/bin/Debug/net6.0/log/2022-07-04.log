@@ -1,0 +1,117 @@
+Telegram connected: username = github65bot
+[2022-07-04 00:31:50]  "/start" from topazdev. chatId = 5473185053, messageId = 503
+[2022-07-04 00:31:52]  <ERROR>  MySql.Data.MySqlClient.MySqlException (0x80004005): Out of range value for column 'id' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at Github2Telegram.Dao.TelegramChatDao.Insert(TelegramChat chat) in D:\Valloon\Workspace\VisualStudio2022\Github2Telegram\Github2Telegram\Dao\TelegramChatDao.cs:line 87
+   at Github2Telegram.TelegramClient.HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken) in D:\Valloon\Workspace\VisualStudio2022\Github2Telegram\Github2Telegram\TelegramClient.cs:line 80
+Telegram connected: username = github65bot
+[2022-07-04 00:36:11]  Message sent to @iBaseDev: test message
+[2022-07-04 00:36:11]  Message sent to @theonlydeazy: test message
+[2022-07-04 00:36:11]  Message sent to @topazdev: test message
+Telegram connected: username = github65bot
+[2022-07-04 00:36:56]  Message sent to @iBaseDev: test message
+[2022-07-04 00:36:56]  Message sent to @theonlydeazy: test message
+[2022-07-04 00:36:56]  Message sent to @topazdev: test message
+[2022-07-04 00:36:57]  Message sent to @Test TG Bot: test message
+[2022-07-04 00:36:57]  Message sent to @+KgeCUFgM7uhjMDA5: test message
+[2022-07-04 00:36:57]  Message sent to @github65bot_test: test message
+[2022-07-04 00:37:02]  Message sent to @iBaseDev: test message
+[2022-07-04 00:37:02]  Message sent to @theonlydeazy: test message
+[2022-07-04 00:37:02]  Message sent to @topazdev: test message
+[2022-07-04 00:37:02]  Message sent to @Test TG Bot: test message
+[2022-07-04 00:37:02]  Message sent to @+KgeCUFgM7uhjMDA5: test message
+[2022-07-04 00:37:02]  Message sent to @github65bot_test: test message
+[2022-07-04 00:37:07]  Message sent to @iBaseDev: test message
+[2022-07-04 00:37:07]  Message sent to @theonlydeazy: test message
+[2022-07-04 00:37:07]  Message sent to @topazdev: test message
+[2022-07-04 00:37:08]  Message sent to @Test TG Bot: test message
+[2022-07-04 00:37:08]  Message sent to @+KgeCUFgM7uhjMDA5: test message
+[2022-07-04 00:37:08]  Message sent to @github65bot_test: test message
+[2022-07-04 00:37:13]  Message sent to @iBaseDev: test message
+[2022-07-04 00:37:13]  Message sent to @theonlydeazy: test message
+[2022-07-04 00:37:13]  Message sent to @topazdev: test message
+[2022-07-04 00:37:13]  Message sent to @Test TG Bot: test message
+[2022-07-04 00:37:13]  Message sent to @+KgeCUFgM7uhjMDA5: test message
+[2022-07-04 00:37:13]  Message sent to @github65bot_test: test message
+[2022-07-04 00:37:14]  "/start" from topazdev. chatId = 5473185053, messageId = 504
+[2022-07-04 00:37:18]  Message sent to @iBaseDev: test message
+[2022-07-04 00:37:18]  Message sent to @theonlydeazy: test message
+[2022-07-04 00:37:18]  Message sent to @topazdev: test message
+[2022-07-04 00:37:18]  Message sent to @Test TG Bot: test message
+[2022-07-04 00:37:18]  Message sent to @+KgeCUFgM7uhjMDA5: test message
+[2022-07-04 00:37:18]  Message sent to @github65bot_test: test message
+[2022-07-04 00:37:18]  Message sent to @topazdev: test message
+[2022-07-04 00:37:23]  Message sent to @iBaseDev: test message
+[2022-07-04 00:37:23]  Message sent to @theonlydeazy: test message
+[2022-07-04 00:37:23]  Message sent to @topazdev: test message
+[2022-07-04 00:37:24]  Message sent to @Test TG Bot: test message
+[2022-07-04 00:37:24]  Message sent to @+KgeCUFgM7uhjMDA5: test message
+[2022-07-04 00:37:24]  Message sent to @github65bot_test: test message
+[2022-07-04 00:37:24]  Message sent to @topazdev: test message
+[2022-07-04 00:37:29]  Message sent to @iBaseDev: test message
+[2022-07-04 00:37:29]  Message sent to @theonlydeazy: test message
+[2022-07-04 00:37:29]  Message sent to @topazdev: test message
+[2022-07-04 00:37:29]  Message sent to @Test TG Bot: test message
+[2022-07-04 00:37:29]  Message sent to @+KgeCUFgM7uhjMDA5: test message
+[2022-07-04 00:37:29]  Message sent to @github65bot_test: test message
+[2022-07-04 00:37:29]  Message sent to @topazdev: test message
+Telegram connected: username = github65bot
+[2022-07-04 00:41:29]  Message sent to 4 chats: test message
+[2022-07-04 00:41:35]  Message sent to 4 chats: test message
+[2022-07-04 00:41:40]  Message sent to 4 chats: test message
+[2022-07-04 00:41:45]  Message sent to 4 chats: test message
+[2022-07-04 00:41:51]  Message sent to 4 chats: test message
+[2022-07-04 00:41:56]  Message sent to 4 chats: test message
+[2022-07-04 00:42:01]  Message sent to 4 chats: test message
+[2022-07-04 00:42:07]  Message sent to 4 chats: test message
+[2022-07-04 00:42:12]  Message sent to 4 chats: test message
+[2022-07-04 00:42:18]  Message sent to 4 chats: test message
+[2022-07-04 00:42:23]  Message sent to 4 chats: test message
+Telegram connected: username = github65bot
+[2022-07-04 00:57:33]  "/start" from topazdev. chatId = 5473185053, messageId = 516
+[2022-07-04 00:57:39]  Message sent to 4 chats: test message
+Telegram connected: username = github65bot
+Telegram connected: username = github65bot
+[2022-07-04 01:00:26]  "/start@github65bot" from . chatId = -527842780, messageId = 519
+Telegram connected: username = github65bot
+[2022-07-04 01:15:26]  "/start@github65bot" from github65bot_test. chatId = -1001726309703, messageId = 93
+Telegram connected: username = github65bot
+[2022-07-04 01:37:03]  "/start@github65bot" from chainguarder. chatId = -1001726309703, messageId = 93
+Telegram connected: username = github65bot
+[2022-07-04 01:38:20]  "/start@github65bot" from topazdev. chatId = -527842780, messageId = 520
+[2022-07-04 01:38:42]  "/start@github65bot" from topazdev. chatId = -527842780, messageId = 521
+[2022-07-04 01:39:33]  "/start@github65bot" from topazdev. chatId = -527842780, messageId = 522
+Telegram connected: username = github65bot
+[2022-07-04 01:41:10]  "/start@github65bot" from topazdev. chatId = -527842780, messageId = 522
+[2022-07-04 01:41:31]  "/stop@github65bot" from topazdev. chatId = -527842780, messageId = 523
+Telegram connected: username = github65bot
+[2022-07-04 01:42:08]  Message sent to 3 chats: test message
+[2022-07-04 01:42:13]  Message sent to 3 chats: test message
+[2022-07-04 01:42:18]  Message sent to 3 chats: test message
+[2022-07-04 01:42:24]  Message sent to 3 chats: test message
+[2022-07-04 01:42:29]  Message sent to 3 chats: test message
+[2022-07-04 01:42:34]  Message sent to 3 chats: test message
+[2022-07-04 01:42:39]  "/start@github65bot" from topazdev. chatId = -527842780, messageId = 524
+Telegram connected: username = github65bot
+[2022-07-04 01:58:00]  "/start@github65bot" from topazdev. chatId = -527842780, messageId = 524
+[2022-07-04 01:58:06]  Message sent to 4 chats: test message
+[2022-07-04 01:58:11]  Message sent to 4 chats: test message
+[2022-07-04 01:58:14]  "/stop@github65bot" from topazdev. chatId = -527842780, messageId = 527
+[2022-07-04 01:58:16]  Message sent to 3 chats: test message
+[2022-07-04 01:58:22]  Message sent to 3 chats: test message
+[2022-07-04 01:58:27]  Message sent to 3 chats: test message
+[2022-07-04 01:58:33]  Message sent to 3 chats: test message
+[2022-07-04 01:58:33]  "/start@github65bot" from topazdev. chatId = -527842780, messageId = 528
+[2022-07-04 01:58:38]  Message sent to 4 chats: test message
+[2022-07-04 01:58:43]  Message sent to 4 chats: test message
+Telegram connected: username = github65bot
+[2022-07-04 21:22:18]  <INFO>  No new commit in 1 repositories.
+[2022-07-04 21:22:50]  "/start@github65bot" from topazdev. chatId = -527842780, messageId = 535
+Telegram connected: username = github65bot
