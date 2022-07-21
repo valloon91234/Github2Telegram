@@ -963,7 +963,8 @@ namespace Github2Telegram
             }
             catch (Exception ex)
             {
-                Logger.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}]  <ERROR>  {ex}", ConsoleColor.Red);
+                Logger.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}]  <ERROR>  {(ex.InnerException == null ? ex.Message : ex.InnerException.Message)}", ConsoleColor.Red, false);
+                Logger.WriteFile($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}]  <ERROR>  {ex}");
             }
         }
 

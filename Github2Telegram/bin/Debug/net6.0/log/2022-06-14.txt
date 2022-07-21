@@ -1,5 +1,0 @@
-Telegram bot connected. id = 5402536436  username = github65bot.
-[2022-06-14 23:25:53]  <Warning>  repository not found: valloon91234/abcdefg
-[2022-06-14 23:25:56]  <INFO>  No new commit in 1 repositories.
-[2022-06-14 23:26:27]  <Warning>  repository not found: valloon91234/abcdefg
-[2022-06-14 23:26:28]  <INFO>  No new commit in 1 repositories.
