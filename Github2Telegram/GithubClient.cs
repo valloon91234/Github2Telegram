@@ -11,9 +11,9 @@ namespace Github2Telegram
         public static void Run()
         {
             Thread.Sleep(5000);
-            using GithubAccountDao githubAccountDao = new();
-            using GithubRepoDao githubRepoDao = new();
-            using GithubCommitDao githubCommitDao = new();
+            GithubAccountDao githubAccountDao = new();
+            GithubRepoDao githubRepoDao = new();
+            GithubCommitDao githubCommitDao = new();
             while (true)
             {
                 //TelegramClient.SendMessageToGroup($"test message", Telegram.Bot.Types.Enums.ParseMode.Html);
@@ -146,6 +146,12 @@ namespace Github2Telegram
                 {
                     Logger.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}]  <ERROR>  {(ex.InnerException == null ? ex.Message : ex.InnerException.Message)}", ConsoleColor.Red, false);
                     Logger.WriteFile($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}]  <ERROR>  {ex}");
+                    githubAccountDao.Dispose();
+                    githubAccountDao = new();
+                    githubRepoDao.Dispose();
+                    githubRepoDao = new();
+                    githubCommitDao.Dispose();
+                    githubCommitDao = new();
                 }
                 int timeout = Env.GetInt("GITHUB_INTERVAL", 30);
                 //Logger.WriteWait($"Waiting for {timeout} seconds", timeout);
