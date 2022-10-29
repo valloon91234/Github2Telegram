@@ -552,11 +552,11 @@ namespace Github2Telegram
                                         }
                                         InlineKeyboardMarkup replyMarkup = new(new[]
                                         {
-                                    new []
-                                    {
-                                        InlineKeyboardButton.WithCallbackData(text: "More...", callbackData: $"/view_commits {offset+limit}"),
-                                    },
-                                });
+                                            new []
+                                            {
+                                                InlineKeyboardButton.WithCallbackData(text: "More...", callbackData: $"/view_commits {offset+limit}"),
+                                            },
+                                        });
                                         await botClient.SendTextMessageAsync(chatId: chatId, text: replyMessageText, parseMode: ParseMode.Html, disableNotification: true, disableWebPagePreview: true, replyMarkup: replyMarkup, cancellationToken: cancellationToken);
                                         //Logger.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}]  replied: \"{replyMessageText}\"", ConsoleColor.DarkGray);
                                     }
